@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game 4 U</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Inicio</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Registro</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="Registro">
+        <div class="Registro-Title">
+            <h1>Sign In</h1>
+        </div>
+        <div class="Registro-body">
+            <form action="{{ url_for('register') }}" method="post">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username">
+                <label for="correo">Correo:</label>
+                <input type="text" id="correo" name="correo">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+        <div class="Registro-Términos">
+            <p>Al hacer clic en "Crear Cuenta", acepto los términos de servicio y la política de privacidad.</p>
+        </div>
+    </div>
+</body>
+</html>

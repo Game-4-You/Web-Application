@@ -1,0 +1,97 @@
+body{
+    background: #2b4f5e;
+}
+
+/*
+* Register Section
+*/
+
+
+.Registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Registro .Registro-Title{
+    color: #f2dc05;
+}
+
+.Registro .Registro-body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Registro .Registro-body input,
+.Registro .Registro-body select,
+.Registro .Registro-body textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px; /* Ajusta este valor según tus necesidades */
+    background-color: #283138;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Añade un margen inferior para separar los elementos de entrada */
+    margin-top: 10px;
+}
+
+
+.Registro .Registro-body input[type="submit"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px; /* Ajusta este valor según tus necesidades */
+    background-color: #145d98;
+    color: white;
+}
+
+.Registro .Registro-Términos{
+    color: #708694;
+}
+
+/*
+* Login Section
+*/
+
+
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Login .Login-Title{
+    color: #f2dc05;
+}
+
+.Login .Login-body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login .Login-body input,
+.Login .Login-body select,
+.Login .Login-body textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px; /* Ajusta este valor según tus necesidades */
+    background-color: #283138;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Añade un margen inferior para separar los elementos de entrada */
+    margin-top: 10px;
+}
+
+
+.Login .Login-body input[type="submit"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px; /* Ajusta este valor según tus necesidades */
+    background-color: #145d98;
+    color: white;
+}

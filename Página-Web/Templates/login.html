@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game 4 U</title>
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Inicio</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Registro</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="Login">
+        <div class="Login-Title">
+            <h1>Log In</h1>
+        </div>
+        <div class="Login-body">
+            <form action="{{ url_for('login') }}" method="post">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="Log in">
+            </form>
+        </div>
+</body>
+</html>
