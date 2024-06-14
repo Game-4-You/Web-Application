@@ -3,9 +3,35 @@ body{
 }
 
 /*
-* Register Section
+* Home Section
 */
 
+.Home-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.Home-header .Home-image {
+    height: 50px; /* Ajusta este valor según tus necesidades */
+}
+
+.Home-header .Home-searchbar {
+    flex-grow: 1;
+}
+
+.Home-header .Home-searchbar input[type="search"] {
+    width: 30%;
+    margin-left: 0;
+}
+
+.Home-header .Home-headers-buttons {
+    margin-left: 10px;
+}
+
+/*
+* Register Section
+*/
 
 .Registro {
     display: flex;
@@ -36,8 +62,9 @@ body{
     border-radius: 10px;
     margin-bottom: 30px; /* Añade un margen inferior para separar los elementos de entrada */
     margin-top: 10px;
+    color: white;
+    padding-left: 10px; /* Añade un margen a la izquierda */
 }
-
 
 .Registro .Registro-body input[type="submit"] {
     box-sizing: border-box;
@@ -54,7 +81,6 @@ body{
 /*
 * Login Section
 */
-
 
 .Login {
     display: flex;
@@ -85,8 +111,9 @@ body{
     border-radius: 10px;
     margin-bottom: 30px; /* Añade un margen inferior para separar los elementos de entrada */
     margin-top: 10px;
+    color: white;
+    padding-left: 10px; /* Añade un margen a la izquierda */
 }
-
 
 .Login .Login-body input[type="submit"] {
     box-sizing: border-box;

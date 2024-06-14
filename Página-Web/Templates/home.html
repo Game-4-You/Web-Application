@@ -8,14 +8,19 @@
 </head>
 <body>
     <header>
-        <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Inicio</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('register') }}">Registro</a></li>
-        </ul>
-        </nav>
+        <div class="Home-header">
+            <div class="Home-image">
+            <img src="ruta/a/tu/imagen.jpg" alt="Logo">
+            </div>
+            <div class="Home-searchbar">
+            <input type="search" id="searchbar" placeholder="Buscar...">
+            </div>
+            <div class="Home-headers-buttons">
+            <button>Log In</button>
+            <button>Sign Up</button>
+            <button>Botón 3</button>
+            </div>
+        </div>
     </header>
-    <p>Inicio</p>
 </body>
 </html>
