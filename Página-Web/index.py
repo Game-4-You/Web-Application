@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -9,7 +10,6 @@ with open('Server/data.json') as f:
 @app.route('/')
 def home():
     return render_template('home.html')
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -30,6 +30,6 @@ def login():
 def register():
     return render_template('register.html')
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
