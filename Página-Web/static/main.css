@@ -2,6 +2,22 @@ body{
     background: #2b4f5e;
 }
 
+button {
+    padding: 15px 25px; /* Aumenta el relleno para hacer el botón más grande */
+    border-radius: 15px; /* Aumenta el radio del borde para hacer los bordes más curvados */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    background-color: #0d3c5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #0d3c5e;
+}
+
 /*
 * Home Section
 */
@@ -64,6 +80,7 @@ body{
     margin-top: 10px;
     color: white;
     padding-left: 10px; /* Añade un margen a la izquierda */
+
 }
 
 .Registro .Registro-body input[type="submit"] {
@@ -121,4 +138,116 @@ body{
     height: 35px; /* Ajusta este valor según tus necesidades */
     background-color: #145d98;
     color: white;
+}
+
+/*
+* Sidebar Section
+ */
+
+.Sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0d3c5e; /* Ajusta este valor según tus necesidades */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.Sidebar button {
+    margin-bottom: 10px; /* Ajusta este valor según tus necesidades */
+    width: 80%; /* Ajusta este valor según tus necesidades */
+    border-radius: 15px; /* Aumenta el radio del borde para hacer los bordes más curvados */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    padding: 15px 25px; /* Aumenta el relleno para hacer el botón más grande */
+    border-radius: 15px; /* Aumenta el radio del borde para hacer los bordes más curvados */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    background-color: #0d3c5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Inicio {
+    background-image: url('../static/assets/house_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+}
+
+#Explorar {
+    background-image: url('../static/assets/compass_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+}
+
+#Buscar {
+    background-image: url('../static/assets/search_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+}
+
+#Ofertas {
+    background-image: url('../static/assets/tag_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+}
+
+#Gratis {
+    background-image: url('../static/assets/gift_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+}
+
+#Suscripción {
+    background-image: url('../static/assets/card_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#sidebarToggleOn{
+    background-image: url('../static/assets/menu_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#sidebarToggleOff{
+    background-image: url('../static/assets/close_img.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de fondo */
+    padding-left: 15px; /* Asegúrate de que el texto no se superponga con la imagen */
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Sidebar button:hover {
+    background-color: white; /* Cambia el color de fondo del botón cuando se pasa el ratón por encima */
 }

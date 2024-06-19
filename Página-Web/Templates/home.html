@@ -5,22 +5,33 @@
     <title>Game 4 U</title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='main.css') }}">
+    <script src="{{ url_for('static', filename='sidebar.js') }}"></script>
 </head>
 <body>
     <header>
         <div class="Home-header">
             <div class="Home-image">
-            <img src="ruta/a/tu/imagen.jpg" alt="Logo">
+            <img src="../static/assets/logo.jpg" alt="Logo">
             </div>
             <div class="Home-searchbar">
             <input type="search" id="searchbar" placeholder="Buscar...">
             </div>
             <div class="Home-headers-buttons">
-            <button>Log In</button>
-            <button>Sign Up</button>
-            <button>Botón 3</button>
+            <button>Ayuda</button>
+                <a href="{{ url_for('login') }}"><button href="{{ url_for('login') }}">Log In</button></a>
+                <a href="{{ url_for('register') }}"><button>Sign Up</button></a>
             </div>
         </div>
     </header>
+    <button id="sidebarToggleOn">Abrir menú</button>
+    <div class="Sidebar" id="Sidebar">
+        <button id="sidebarToggleOff">Cerrar Menú</button>
+        <button id="Inicio">Inicio</button>
+        <button id="Explorar">Explorar</button>
+        <button id="Buscar">Buscar</button>
+        <button id="Ofertas">Ofertas</button>
+        <button id="Gratis">Juegos Gratis</button>
+        <button id="Suscripción">Suscripción</button>
+    </div>
 </body>
 </html>
