@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
 
-data_file_path = os.path.join(os.path.dirname(__file__), 'Server', 'data.json')
+data_file_path = os.path.join(os.path.dirname(__file__), 'server', 'data.json')
 
 with open(data_file_path) as f:
     users = json.load(f)
@@ -12,7 +12,7 @@ with open(data_file_path) as f:
 
 @app.route('/data')
 def get_data():
-    with open('Server/data.json') as f:
+    with open('server/data.json') as f:
         data = json.load(f)
     return jsonify(data)
 
@@ -44,5 +44,6 @@ def register():
 
 
 if __name__ == '__main__':
+    debug = os.environ.get('DEBUG', 'False').lower() in ['true', '1', 't']
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=debug)
