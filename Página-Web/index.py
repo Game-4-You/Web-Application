@@ -17,12 +17,7 @@ def get_data():
     return jsonify(data)
 
 
-@app.route('/')
-def home():
-    return render_template('login.html')
-
-
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
