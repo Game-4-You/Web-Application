@@ -1,15 +1,18 @@
 import os
-import json
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, json
 
 app = Flask(__name__)
 
-with open('Server/data.json') as f:
+data_file_path = os.path.join(os.path.dirname(__file__), 'Server', 'data.json')
+
+with open(data_file_path) as f:
     users = json.load(f)
+
 
 @app.route('/')
 def home():
     return render_template('home.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -26,10 +29,11 @@ def login():
     else:
         return render_template('login.html')
 
+
 @app.route('/register')
 def register():
     return render_template('register.html')
 
+
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug=True)
