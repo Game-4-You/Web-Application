@@ -1,8 +1,10 @@
 import os
 import json
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, session
+import secrets
 
 app = Flask(__name__)
+app.secret_key = secrets.token_hex(16)
 
 data_file_path = os.path.join(os.path.dirname(__file__), 'server', 'data.json')
 
@@ -17,7 +19,20 @@ def get_data():
     return jsonify(data)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+def initial():
+    return redirect(url_for('login'))
+
+
+@app.route('/home')
+def home():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    user = session['user']
+    return render_template('home.html', user=user)
+
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -26,6 +41,8 @@ def login():
         # Buscar el usuario en la lista de usuarios
         for user in users:
             if user['Username'] == username and user['UserID'] == password:
+                # Guardar la información del usuario en la sesión
+                session['user'] = user
                 return redirect(url_for('home'))
 
         return "Nombre de usuario o contraseña incorrectos", 401
@@ -41,4 +58,4 @@ def register():
 if __name__ == '__main__':
     debug = os.environ.get('DEBUG', 'False').lower() in ['true', '1', 't']
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=debug)
+    app.run(host='0.0.0.0', port=port, debug=True)
