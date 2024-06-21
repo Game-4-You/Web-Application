@@ -1,5 +1,6 @@
-body {
-    background-color: #2b4f5e;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 button {
@@ -128,6 +129,8 @@ button:hover {
     background-repeat: no-repeat;
     background-position: 20px center;
     background-size: 20px 20px;
+    width: 200px;  /* Cambia esto al ancho que desees */
+    height: 80px;  /* Cambia esto al alto que desees */
 }
 
 #Inicio {
@@ -160,6 +163,32 @@ button:hover {
 
 .Sidebar button:hover {
     background-color: #273945; /* Cambia el color de fondo del botón cuando se pasa el ratón por encima */
+}
+
+/*
+* Home Content
+*/
+
+.HomeContent {
+    color: white;
+    background-color: #273945;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.HomeContent div {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.HomeContent img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /*
@@ -257,4 +286,53 @@ button:hover {
     color: white;
 }
 
+/*
+* Subscription Page
+*/
 
+.SubscriptionContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.SubscriptionContainer .SubscriptionRow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.SubscriptionContainer .SubscriptionCol {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.SubscriptionContainer .SubscriptionCol:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.SubscriptionContainer .SubscriptionCol h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.SubscriptionContainer .SubscriptionCol ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.SubscriptionContainer .SubscriptionCol ul li {
+    padding: 5px 0;
+    color: #666;
+}
+
+.SubscriptionContainer .SubscriptionCol h1 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 20px;
+}

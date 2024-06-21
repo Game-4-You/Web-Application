@@ -55,6 +55,31 @@ def register():
     return render_template('register.html')
 
 
+@app.route('/explore')
+def explore():
+    return render_template('explore.html')
+
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
+
+
+@app.route('/sales')
+def sales():
+    return render_template('sales.html')
+
+
+@app.route('/free')
+def free():
+    return render_template('free.html')
+
+
+@app.route('/subscription')
+def subscription():
+    return render_template('subscription.html')
+
+
 if __name__ == '__main__':
     debug = os.environ.get('DEBUG', 'False').lower() in ['true', '1', 't']
     port = int(os.environ.get('PORT', 5000))
