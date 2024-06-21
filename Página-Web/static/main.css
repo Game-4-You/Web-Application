@@ -203,6 +203,7 @@ button:hover {
 }
 
 .Registro .Registro-Title{
+    font-family: 'Black Han Sans', sans-serif;
     color: #f2dc05;
 }
 
@@ -253,6 +254,7 @@ button:hover {
 }
 
 .Login .Login-Title{
+    font-family: 'Black Han Sans', sans-serif;
     color: #f2dc05;
 }
 
