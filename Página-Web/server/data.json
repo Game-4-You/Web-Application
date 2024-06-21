@@ -2,7 +2,9 @@
     {
         "Username": "Ana Garcia",
         "UserID": "viio5mtv5nq0",
-        "Friends": [],
+        "Friends": [
+
+        ],
         "Specifications": [
             "Intel Core i5-12500H",
             "512GB SSD NVMe",
@@ -61,7 +63,7 @@
         "Friends": [
             "w3g829d26vzd",
             "viio5mtv5nq0",
-            "w3g829d26vzd"
+            "qw9qikpilfdt"
         ],
         "Specifications": [
             "Intel Core i5-12500H",
