@@ -16,14 +16,59 @@
 
     <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
     <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap">
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b4f5e; /* Color de fondo azul oscuro */
+    color: white; /* Color del texto en blanco */
+    font-family: 'Oswald', sans-serif; /* Fuente del texto */
+}
+
+button {
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #273945;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #0d3c5e;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+header nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #f2dc05;
+    text-decoration: none;
+    font-family: 'Black Han Sans', sans-serif;
+}
+    </style>
 </head>
 <body style="background-color: #2b4f5e;">
     <header>
         <nav>
         <ul>
-            <li><a href="{{ url_for('home') }}">Inicio</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('register') }}">Registro</a></li>
+                <li><a href="{{ url_for('home') }}">INICIO</a></li>
+                <li><a href="{{ url_for('login') }}">INICIAR SESION</a></li>
+                <li><a href="{{ url_for('register') }}">REGISTRO</a></li>
         </ul>
         </nav>
     </header>
