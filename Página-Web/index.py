@@ -15,7 +15,7 @@ with open(data_file_path) as f:
 
 # Define la función para obtener la URL de la imagen
 def get_image_url(game_name):
-    api_key = 'AIzaSyBeGyYTzIqeHxvWU7SVWKOrZ-sueLe9ho0'
+    api_key = 'AIzaSyBqSqoY28lVfmPC6w61vQT2P16SV9UXchw'
     search_engine_id = '763dfea0c13cf4b9a'
     search_url = f"https://www.googleapis.com/customsearch/v1?q={game_name}&searchType=image&key={api_key}&cx={search_engine_id}"
 
@@ -128,11 +128,6 @@ def free():
 @app.route('/subscription')
 def subscription():
     return render_template('subscription.html')
-
-
-@app.route('/register2')
-def register2():
-    return render_template('register2.html')
 
 
 if __name__ == '__main__':
