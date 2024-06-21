@@ -30,8 +30,6 @@ button:hover {
 .HomeButton {
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
-    border-radius: 25px; /* Aumenta el radio del borde para hacer los bordes más curvados */
     font-size: 18px; /* Aumenta el tamaño de la fuente */
     padding: 25px 25px 25px 25px; /* Aumenta el relleno para hacer el botón más grande */
     background-color: #273945;
