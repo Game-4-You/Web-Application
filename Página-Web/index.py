@@ -90,9 +90,19 @@ def login():
         return render_template('login.html')
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        correo = request.form.get('correo')
+        password = request.form.get('password')
+        return redirect(url_for('specifications_register'))
+
     return render_template('register.html')
+
+@app.route('/specifications_register')
+def specifications_register():
+    return render_template('specifications_register.html')
 
 
 @app.route('/explore')

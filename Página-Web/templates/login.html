@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Game 4 U</title>
 
     <!-- CUSTOM CSS -->
 
@@ -14,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <!-- Google Fonts -->
     <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
+    <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap">
 </head>
 <body style="background-color: #2b4f5e;">
     <header>
@@ -27,15 +27,15 @@
     </header>
     <div class="Login">
         <div class="Login-Title">
-            <h1>Log In</h1>
+            <h1>INICIAR SESION</h1>
         </div>
         <div class="Login-body">
             <form action="{{ url_for('login') }}" method="post">
-                <label for="username">Nombre de usuario:</label>
+                <label for="username">NOMBRE DE USUARIO:</label>
                 <input type="text" id="username" name="username">
-                <label for="password">Contraseña:</label>
+                <label for="password">CONTRASEÑA:</label>
                 <input type="password" id="password" name="password">
-                <input type="submit" value="Log in">
+                <input type="submit" value="INGRESAR">
             </form>
         </div>
 </body>
