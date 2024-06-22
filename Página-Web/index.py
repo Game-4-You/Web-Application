@@ -102,7 +102,21 @@ def register():
 
 @app.route('/specifications_register')
 def specifications_register():
+    if request.method == 'POST':
+        combo1 = request.form.get('combo1')
+        combo2 = request.form.get('combo2')
+        combo3 = request.form.get('combo3')
+        combo4 = request.form.get('combo4')
+        combo5 = request.form.get('combo5')
+
+        return redirect(url_for('preferences_register'))
+
     return render_template('specifications_register.html')
+
+@app.route('/preferences_register')
+def preferences_register():
+    return render_template('preferences_register.html')
+
 
 
 @app.route('/explore')
