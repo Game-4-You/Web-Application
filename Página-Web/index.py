@@ -3,14 +3,19 @@ import json
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
 import secrets
 import requests
+from pymongo import MongoClient
+
+client = MongoClient('mongodb+srv://fabritzziopescoran:oZRbG4bYRYEldXmU@game4udata.duy9eaj.mongodb.net/')
+
+db = client['Game4U']
+collection = db['user-videogame-dataset']
+
+users = list(collection.find())
+for user in users:
+    user['_id'] = str(user['_id'])
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-
-data_file_path = os.path.join(os.path.dirname(__file__), 'server', 'data.json')
-
-with open(data_file_path) as f:
-    users = json.load(f)
 
 
 # Define la función para obtener la URL de la imagen
@@ -25,10 +30,9 @@ def get_image_url(game_name):
     if 'items' in results and len(results['items']) > 0:
         return results['items'][0]['link']
     else:
-        # URL de imagen predeterminada local
-        return url_for('static', filename='assets/default_image.jpg')  # Asegúrate de tener esta imagen en la carpeta 'static/assets'
+        return url_for('static', filename='assets/default_image.jpg')
 
-# Nueva función para obtener los juegos de los amigos
+
 def get_friends_games(user):
     friends_games = []
     for friend_id in user['Friends']:
@@ -99,6 +103,7 @@ def register():
         return redirect(url_for('specifications_register'))
 
     return render_template('register.html')
+
 
 @app.route('/specifications_register')
 def specifications_register():
