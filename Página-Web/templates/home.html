@@ -12,11 +12,8 @@
     <script>
         const inicioUrl = "{{ url_for('home') }}";
         const exploreUrl = "{{ url_for('explore') }}";
-        const searchUrl = "{{ url_for('search') }}";
-        const salesUrl = "{{ url_for('sales') }}";
-        const freeUrl = "{{ url_for('free') }}";
         const SubscriptionUrl = "{{ url_for('subscription') }}";
-
+        const logoutUrl = "{{ url_for('logout') }}";
     </script>
 
     <!-- BOOTSTRAP 5-->
@@ -42,7 +39,7 @@
                 <div class="Home-headers-buttons">
                     <button id="Ayuda" class="HomeButton"></button>
                     <button id="Bag" class="HomeButton"></button>
-                    <button id="User" class="HomeButton"></button>
+                    <button id="Logout" class="HomeButton"></button>
                 </div>
             </div>
         </div>
@@ -52,9 +49,6 @@
     <button id="sidebarToggleOff" class="HomeButton">Cerrar Menú</button>
     <button id="Inicio" class="HomeButton">Inicio</button>
     <button id="Explorar" class="HomeButton">Explorar</button>
-    <button id="Buscar" class="HomeButton">Buscar</button>
-    <button id="Ofertas" class="HomeButton">Ofertas</button>
-    <button id="Gratis" class="HomeButton">Juegos Gratis</button>
     <button id="Suscripción" class="HomeButton">Suscripción</button>
 </div>
 <div>

@@ -68,7 +68,7 @@ button:hover {
     justify-content: space-between; /* Esto asegura que los botones se distribuyan uniformemente a lo largo del contenedor */
 }
 
-#Ayuda, #Bag, #User {
+#Ayuda, #Bag, #Logout {
     border-radius: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,7 +89,7 @@ button:hover {
     background-image: url('../static/assets/bag_img.png');
 }
 
-#User {
+#Logout {
     background-image: url('../static/assets/user_img.png');
 }
 
@@ -475,4 +475,50 @@ button:hover {
     font-size: 36px;
     color: #333;
     margin-top: 20px;
+}
+
+/*
+* Explore Page
+ */
+
+body {
+    background-color: #2b4f5e;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .2s;
+    margin-bottom: 50px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    height: 60px;
+    overflow: hidden;
+}
+
+.card-text {
+    height: 100px;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }

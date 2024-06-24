@@ -5,25 +5,19 @@
     <title>Game 4 U</title>
 
     <!-- CUSTOM CSS -->
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
     <!-- JAVASCRIPT -->
-
     <script src="{{ url_for('static', filename='sidebar.js') }}"></script>
     <script>
         const inicioUrl = "{{ url_for('home') }}";
         const exploreUrl = "{{ url_for('explore') }}";
-        const searchUrl = "{{ url_for('search') }}";
-        const salesUrl = "{{ url_for('sales') }}";
-        const freeUrl = "{{ url_for('free') }}";
         const SubscriptionUrl = "{{ url_for('subscription') }}";
+        const logoutUrl = "{{ url_for('logout') }}";
     </script>
 
     <!-- BOOTSTRAP 5-->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #2b4f5e;">
 <header>
@@ -34,7 +28,7 @@
             </button>
             <div class="Home-header">
                 <div class="Home-image">
-                    <img src="../static/assets/logo.png" alt="Logo" style="height: 50px">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" style="height: 50px">
                 </div>
                 <div class="container-fluid">
                     <form class="d-flex">
@@ -45,7 +39,7 @@
                 <div class="Home-headers-buttons">
                     <button id="Ayuda" class="HomeButton"></button>
                     <button id="Bag" class="HomeButton"></button>
-                    <button id="User" class="HomeButton"></button>
+                    <button id="Logout" class="HomeButton"></button>
                 </div>
             </div>
         </div>
@@ -55,9 +49,6 @@
     <button id="sidebarToggleOff" class="HomeButton">Cerrar Menú</button>
     <button id="Inicio" class="HomeButton">Inicio</button>
     <button id="Explorar" class="HomeButton">Explorar</button>
-    <button id="Buscar" class="HomeButton">Buscar</button>
-    <button id="Ofertas" class="HomeButton">Ofertas</button>
-    <button id="Gratis" class="HomeButton">Juegos Gratis</button>
     <button id="Suscripción" class="HomeButton">Suscripción</button>
 </div>
     <div class="SubscriptionContainer">

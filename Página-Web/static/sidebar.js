@@ -2,6 +2,11 @@ window.onload = function () {
     var sidebarToggleOff = document.getElementById('sidebarToggleOff');
     var sidebarToggleOn = document.getElementById('sidebarToggleOn');
     var sidebar = document.getElementById('Sidebar');
+    var logoutButton = document.getElementById('Logout');
+
+    logoutButton.addEventListener('click', function () {
+        window.location.href = logoutUrl;
+    });
 
     if (sidebarToggleOff && sidebarToggleOn && sidebar) {
         sidebarToggleOn.addEventListener('click', function () {
@@ -25,15 +30,6 @@ window.onload = function () {
                     case 'Explorar':
                         window.location.href = exploreUrl;
                         break;
-                    case 'Buscar':
-                        window.location.href = searchUrl;
-                        break;
-                    case 'Ofertas':
-                        window.location.href = salesUrl;
-                        break;
-                    case 'Gratis':
-                        window.location.href = freeUrl;
-                        break;
                     case 'Suscripción':
                         window.location.href = SubscriptionUrl;
                         break;
@@ -41,6 +37,6 @@ window.onload = function () {
             });
         }
     } else {
-        console.log('sidebarToggleOff, sidebarToggleOn, sideBar or sideBarButton is null');
+        console.log('Something went wrong: Exception at sidebar.js onload function.');
     }
 }
