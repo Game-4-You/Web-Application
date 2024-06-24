@@ -20,7 +20,7 @@ app.secret_key = secrets.token_hex(16)
 
 # Define la función para obtener la URL de la imagen
 def get_image_url(game_name):
-    api_key = 'AIzaSyCDdtNae_OIMvga8-Csy-yvkxQ74o-WmOU'
+    api_key = 'AIzaSyARhpi1so6F94F7TVt6e4k6EB6UweaID3E'
     search_engine_id = '763dfea0c13cf4b9a'
     search_url = f"https://www.googleapis.com/customsearch/v1?q={game_name}&searchType=image&key={api_key}&cx={search_engine_id}"
 
